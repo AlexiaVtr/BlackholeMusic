@@ -1,1 +1,344 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/* home */
+
+.tittle-card{
+  margin-top: 10%;
+}
+
+body{
+  padding-bottom: 50px;
+}
+.main-container{
+  margin-top: 20px;
+}
+
+
+/* Carousel */
+
+
+header{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  justify-content: center;
+}
+#header.alt{
+  padding: 4em 2em 1em 2em;;
+}
+#header h1{
+  margin: 0 0 0.25em 0;
+}
+h1{
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+
+.carousel{
+  height: 100px;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0;
+  width: cover;
+  min-width: 100% !important;
+}
+
+#header a.button {
+  background: rgb(45, 5, 58);
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+  text-shadow: 0px 1px rgb(200 200 200 / 25%);
+  box-shadow: 0 0 1px rgb(200 200 200 / 25%);
+  /* transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; */
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 300;
+  height: 2.75em;
+  line-height: 2.75em;
+  min-width: 9.25em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    margin: 10px;
+}
+
+/* Cart style */
+
+.cart-page{
+  margin: 80px auto;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+th{
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background: #a1a1a1;
+  font-weight: normal;
+}
+
+td{
+  padding: 10px 5px;
+}
+
+td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a{
+  color: rgb(173, 29, 221);
+  font-size: 12px;
+}
+
+td img{
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.total-price{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table{
+  border-top: 3px solid #a1a1a1;
+  width: 100%;
+  max-width: 350px;
+}
+
+td:last-child{
+  text-align: right;
+}
+th:last-child{
+  text-align: right;
+}
+
+.final-button{
+  text-align: right;
+  padding-top: 30px;
+}
+
+
+@media only screen and  (max-width:600px){
+  .cart-info p{
+    display: none;
+  }
+}
+
+
+
+
+/* Style the topnav links */
+.navbar {
+  overflow: visible;
+  background-color: rgb(45, 5, 58);
+}
+.navbar a {
+  font-family: 'roboto';
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+.logo{
+  color:#6f8ad3 ;
+}
+
+/* Cards */
+
+
+.card-group .card {
+  background-color: transparent;
+  border-color: transparent;
+  width: 350px !important;
+  padding: 30px !important;
+  align-content: flex !important;
+}
+
+.tittle-card{
+
+  text-align: center;
+
+}
+.card-img, .card-img-top, .img-fluid, .card{
+  background-color: #e0e5ec !important;
+  border-color: transparent !important;
+  width: 350px !important;
+  padding: 30px #e0e5ec !important;
+  align-content: flex !important;
+
+}
+
+.cardblock, .card-tittle, .card-text{
+  background-color: #e0e5ec !important;
+}
+
+
+/* Play demos */
+
+
+html, body{
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  background-color:  #e0e5ec !important;
+}
+
+img{
+  max-width: 100%;
+}
+
+.music-container{
+  font-family: 'FontAwesome'!important;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.player{
+  width: 300px;
+  height: 550px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 30px #ffffff;;
+}
+
+.player__controls{
+  display: flex;
+  width: 95%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 25 px;
+}
+
+.regret__btn{
+  font-family: sans-serif;
+  justify-content: center;
+  border-radius: 30% ;
+  box-shadow: 9px 9px 16px #a3b1c6, -9px -9px 30px #ffffff;;
+  margin: 50px 0 0 0px;
+}
+
+audio::-webkit-media-controls-panel{
+  background-color:#e0e5ec !important;
+  }
+.player__album{
+  width: 200px;
+}
+
+.player__img{
+  margin: 0px 0 0 0px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 30s linear infinite;
+  animation-delay: 1s;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } };
+
+
+.player__title{
+  border: transparent;
+  background-color: transparent;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  margin: -55px 90px 0px;
+  font-weight: 600;
+  font-size: 0.8em;
+  color: #a1a1a1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+  width: 1000;
+
+
+}
+
+.player__title:hover{
+  color: #bdbcbc;
+}
+
+.player__title:active{
+  color: #f2f2f2;
+}
+
+.player__artist{
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  font-weight: 600;
+  opacity: 0.5;
+  margin: -10px 0px 0px 0px;
+  font-family: sans-serif ;
+}
+.player__song{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1em;
+  opacity: 0.5;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Animations Css */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

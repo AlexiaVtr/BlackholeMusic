@@ -1,3 +1,5 @@
+import { FirebaseService } from './services/firebase/firebase.service';
+import { AuthService } from './services/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'spa';
+  title = 'blackhole-music';
+
+  constructor(
+    private fireBaseService: FirebaseService,
+    private auth: AuthService
+  ){}
 }
