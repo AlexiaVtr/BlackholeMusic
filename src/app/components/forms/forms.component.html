@@ -1,0 +1,80 @@
+<form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">First name</label>
+      <input type="text" class="form-control"
+      id="validationDefault01" placeholder="First name"
+      formControlName="nombre" required
+      [class.is-invalid]="nombreNoValido">
+      <small *ngIf="nombreNoValido == true" class="text-danger">
+        Your name is very important! Please, make it valid :(
+      </small>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Last name</label>
+      <input type="text" class="form-control"
+      id="validationDefault02" placeholder="Last name"
+      formControlName="apellido" required
+      [class.is-invalid]="apellidoNoValido">
+      <small *ngIf="apellidoNoValido == true" class="text-danger">
+        Your lastname is very important! Please, make it valid :(
+      </small>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefaultUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+        <input type="text" class="form-control"
+        id="validationDefaultUsername" placeholder="Username"
+        aria-describedby="inputGroupPrepend2" required
+        formControlName="usuario"
+        [class.is-invalid]="usuarioNoValido">
+        <small *ngIf="usuarioNoValido == true" class="text-danger">
+          Don't be boring, choose a username!
+        </small>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault03">Favorite artists</label>
+      <input type="text" class="form-control"
+      id="validationDefault03" placeholder="Die Antwoord, Mothy..."
+      formControlName="preferencia">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault04">Country</label>
+      <input type="text" class="form-control"
+      id="validationDefault04" placeholder="Country" required
+      formControlName="pais"
+      [class.is-invalid]="paisNoValido">
+      <small *ngIf="paisNoValido == true" class="text-danger">
+        Invalid, try again.
+      </small>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault05">City</label>
+      <input type="text" class="form-control"
+       id="validationDefault05" placeholder="City" required
+       formControlName="ciudad"
+       [class.is-invalid]="ciudadNoValida">
+       <small *ngIf="ciudadNoValida == true" class="text-danger">
+         Invalid, try again.
+       </small>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required
+      formControlName="check"
+       [class.is-invalid]="checkNoValido">
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+  <br>
+  <button class="btn btn-primary" type="submit">I'm ready</button>
+</form>

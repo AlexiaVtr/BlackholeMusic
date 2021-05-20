@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <div class="logo">Blackhole Music</div>
+      </a>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/home']">Home</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/albums']">Albums</a>
+          </li>
+          <li *ngIf="authGuard.canActivate() == true" class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/car']">Cart</a>
+          </li>
+        </ul>
+
+
+        <app-auth-button *ngIf="authGuard.canActivate() == true"></app-auth-button>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Check it..." (keyup.enter)="findAlbum(findText.value)" #findText>
+          <button (click)= "findAlbum(findText.value)"
+          class="btn btn-outline-success" type="submit">Choose!</button>
+        </form>
+      </div>
+    </div>
+  </nav>

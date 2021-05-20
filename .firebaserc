@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "blackhole-music": {
+      "hosting": {
+        "spa": [
+          "blackhole-music"
+        ]
+      }
+    }
+  }
+}

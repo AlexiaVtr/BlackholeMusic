@@ -1,0 +1,53 @@
+
+<h1>Carrito</h1>
+<hr>
+
+
+<div class="container" *ngIf="existe() == false">
+      <div class="empty_message">
+        <h3>No tienes artículos en tu carro de compras.</h3>
+        <br>
+      </div>
+      <div>
+         <a [routerLink]="['/albums']" class="btn btn-dark">Empieza a comprar!</a>
+      </div>
+</div>
+
+
+<div *ngIf="existe() == true" class="small-container cart-page">
+  <table>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+        <tr *ngFor="let song of carrito2; let i = index;">
+          <td>
+            <div class="cart-info">
+                <img [src]="song.img">
+                <div>
+                  <p>{{song.album}}</p>
+                  <small>Price: {{song.precio | currency}}</small>
+                  <br>
+                  <a (click)="remove(song.serie)" class="button" style="text-decoration: none">Remove</a>
+                </div>
+            </div>
+          </td>
+            <td><input type="number"  value="{{song.cantidad}}" id="Num1"></td>
+            <td>{{carrito3[i] | currency}}</td>
+        </tr>
+</table>
+
+<div class="total-price">
+
+  <table>
+    <tr>
+      <td>Subtotal</td>
+      <td>{{this.total | currency}}</td>
+    </tr>
+  </table>
+</div>
+<div class="final-button">
+  <a [routerLink]="['/forms']" class="btn btn-dark">Finalice purchase</a>
+</div>
+</div>

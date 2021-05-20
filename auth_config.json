@@ -1,0 +1,10 @@
+
+{
+  "domain":"dev-x16yrk-w.us.auth0.com",
+  "clientId":"Qp4YxC5hfMzJu9tqBeBpvTxDfVFPwKEh",
+  "clientSecret":"EtHsa_2U2Pg9YUvYRV8RBpy2Mk4Jie-P-1zCjN8GCaSulkX3E-33PbT6J7xgOSyj",
+  "logout_url": "http://localhost:4200",
+  "audience":"",
+  "redirect_uri":"",
+  "apiUrl":""
+}

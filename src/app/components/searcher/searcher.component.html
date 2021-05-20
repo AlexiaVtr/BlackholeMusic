@@ -1,0 +1,31 @@
+<div class="animated fadeIn fast">
+  <h1>VOCALOID</h1>
+  <h3>Search: <small>{{termino}}</small></h3>
+</div>
+
+<div class="wor animated fadeIn fast" *ngIf=" albums.length == 0 ">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+        No se han obtenido resultados :(
+    </div>
+  </div>
+</div>
+
+
+  <div class="card-columns">
+
+    <div class="card" *ngFor="let album of albums; let i = index">
+      <img [src]="album.img" class="card-img-top img-fluid" [alt]="album.nombre">
+      <div class="card-block">
+        <h4 class="card-title">{{album.album}}</h4>
+        <p class="card-text">{{album.nombre}}</p>
+        <p class="card-text"><small class="text-muted">{{album.vocal}}</small> </p>
+
+        <button [routerLink]="['/album/' + album.serie]"
+        type="button" class="btn btn-outline-primary btn-block">
+         Show Demo
+        </button>
+      </div>
+     </div>
+
+  </div>

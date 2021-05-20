@@ -1,0 +1,14 @@
+
+  <div class="card col-lg-6">
+    <img [src]="album.img" class="card-img img-fluid" [alt]="album.nombre">
+    <div class="card-block">
+      <h4 class="card-title">{{album.album}}</h4>
+      <p class="card-text">{{album.nombre}}</p>
+      <p class="card-text"><small class="text-muted">{{album.vocal}}</small> </p>
+
+      <button (click)="verAlbum()"
+       type="button" class="btn btn-outline-primary btn-block">
+       Show Demo</button>
+
+
+    </div>

@@ -1,0 +1,34 @@
+<div class="animated fadeIn">
+</div>
+
+
+<div class="music-container">
+  <div class="player">
+      <div class="player__controls">
+        <div class="player__btn player__btn--small">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <button (click)="showOptions(); getStock()"
+        class="player__title">Buy now!</button>
+      </div>
+
+      <div class="player__album">
+        <img
+        src="{{music.cd}}"
+        alt="Album Cover"
+        class="player__img">
+      </div>
+
+      <h2 class="player__artist">{{music.nombre}}</h2>
+      <h3 class="player__song">{{music.album}}</h3>
+
+      <audio class="player__audio" controls id="audio">
+        <source src="{{music.demo}}" type="audio/mpeg" />
+      </audio>
+
+        <div class="regret__btn player__btn--medium">
+          <a [routerLink]="['/albums']" class="btn btn-dark">Volver a la lista</a>
+        </div>
+      </div>
+  </div>
+
